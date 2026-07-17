@@ -1,0 +1,116 @@
+{
+  "architecture_summary": "The architecture of the Library Management System is designed to be modular, scalable, and maintainable. It consists of a backend using FastAPI for API development, SQLAlchemy for ORM, Alembic for migrations, and PostgreSQL as the database. The frontend uses React with TypeScript and Vanilla CSS for building user interfaces.",
+  "database_schema_summary": "The database schema includes tables for users, librarians, books, borrow records, and other entities. Relationships between these tables are managed using foreign keys. SQLAlchemy models will be generated from this schema to interact with the database through ORM.",
+  "files": [
+    {
+      "path": "backend/app/main.py",
+      "type": "backend",
+      "purpose": "Main entry point for FastAPI application"
+    },
+    {
+      "path": "backend/app/config/settings.py",
+      "type": "backend",
+      "purpose": "Configuration settings for the application"
+    },
+    {
+      "path": "backend/app/db/base_model.py",
+      "type": "backend",
+      "purpose": "Base model class using SQLAlchemy ORM"
+    },
+    {
+      "path": "backend/app/db/session.py",
+      "type": "backend",
+      "purpose": "Database session management for ORM operations"
+    },
+    {
+      "path": "backend/app/models/user.py",
+      "type": "backend",
+      "purpose": "User database model with authentication fields"
+    },
+    {
+      "path": "backend/app/models/librarian.py",
+      "type": "backend",
+      "purpose": "Librarian database model with additional management privileges"
+    },
+    {
+      "path": "backend/app/models/book.py",
+      "type": "backend",
+      "purpose": "Book database model with details like ISBN, title, author, etc."
+    },
+    {
+      "path": "backend/app/models/borrow_record.py",
+      "type": "backend",
+      "purpose": "Borrow record database model linking users and books"
+    },
+    {
+      "path": "backend/app/services/auth_service.py",
+      "type": "backend",
+      "purpose": "Service layer for authentication logic using JWT"
+    },
+    {
+      "path": "backend/app/services/book_service.py",
+      "type": "backend",
+      "purpose": "Service layer for book management operations"
+    },
+    {
+      "path": "backend/app/routes/auth_routes.py",
+      "type": "backend",
+      "purpose": "API routes for user authentication and token management"
+    },
+    {
+      "path": "backend/app/routes/book_routes.py",
+      "type": "backend",
+      "purpose": "API routes for book management operations"
+    },
+    {
+      "path": "backend/app/routes/borrow_routes.py",
+      "type": "backend",
+      "purpose": "API routes for borrowing and returning books"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "type": "frontend",
+      "purpose": "Main application component"
+    },
+    {
+      "path": "frontend/src/components/Header.tsx",
+      "type": "frontend",
+      "purpose": "Application navigation header component"
+    },
+    {
+      "path": "frontend/src/components/LoginForm.tsx",
+      "type": "frontend",
+      "purpose": "User login form component"
+    },
+    {
+      "path": "frontend/src/components/BookList.tsx",
+      "type": "frontend",
+      "purpose": "Component to display a list of books"
+    },
+    {
+      "path": "frontend/src/components/BorrowForm.tsx",
+      "type": "frontend",
+      "purpose": "Borrow book form component"
+    },
+    {
+      "path": "frontend/src/components/ReturnForm.tsx",
+      "type": "frontend",
+      "purpose": "Return book form component"
+    },
+    {
+      "path": "frontend/src/services/authService.ts",
+      "type": "frontend",
+      "purpose": "Service layer for authentication logic using JWT"
+    },
+    {
+      "path": "frontend/src/services/bookService.ts",
+      "type": "frontend",
+      "purpose": "Service layer for book management operations"
+    },
+    {
+      "path": "frontend/src/services/borrowService.ts",
+      "type": "frontend",
+      "purpose": "Service layer for borrowing and returning books"
+    }
+  ]
+}

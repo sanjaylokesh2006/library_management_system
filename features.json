@@ -1,0 +1,119 @@
+{
+  "features": [
+    {
+      "id": "FEAT-001",
+      "title": "User Authentication",
+      "description": "Implement JWT-based authentication for users and librarians with secure token management and expiration mechanisms.",
+      "user_stories": [
+        "As a user, I want to log in using my credentials so that I can access the library system.",
+        "As a librarian, I want to log in using my credentials so that I can manage the library inventory."
+      ],
+      "acceptance_criteria": [
+        "JWT-based authentication must be implemented for both users and librarians.",
+        "Tokens should expire after 24 hours for users and 7 days for librarians.",
+        "Refresh tokens should be supported to allow long-term sessions."
+      ]
+    },
+    {
+      "id": "FEAT-002",
+      "title": "Book Management",
+      "description": "Allow librarians to add, update, and delete book records with support for multiple formats and genres.",
+      "user_stories": [
+        "As a librarian, I want to add new books to the inventory so that they are available for borrowing.",
+        "As a librarian, I want to update existing book records so that information is accurate.",
+        "As a librarian, I want to delete books from the inventory when they are no longer available."
+      ],
+      "acceptance_criteria": [
+        "Librarians should be able to add new books with valid ISBNs and titles/author names up to 256 characters.",
+        "Existing book records can be updated with new information, including format and genre.",
+        "Books can be deleted from the inventory when they are no longer available."
+      ]
+    },
+    {
+      "id": "FEAT-003",
+      "title": "Borrowing & Returning Books",
+      "description": "Enable users to borrow books with a due date, implement automated reminders for overdue items, and allow returning books with extension options.",
+      "user_stories": [
+        "As a user, I want to borrow books so that I can read them.",
+        "As a user, I want to receive reminders when my book is due so that I don't forget to return it.",
+        "As a user, I want to extend the loan period of my borrowed books if applicable."
+      ],
+      "acceptance_criteria": [
+        "Users should be able to borrow books with a due date set for 14 days from the borrowing date.",
+        "Automated daily email/SMS reminders should be sent 24 hours before the due date for overdue items.",
+        "Users should be allowed to extend the loan period up to 2 weeks from the due date."
+      ]
+    },
+    {
+      "id": "FEAT-004",
+      "title": "Search Functionality",
+      "description": "Provide search capabilities by title, author, ISBN, and genre with support for advanced search options.",
+      "user_stories": [
+        "As a user, I want to search for books by title so that I can find the book I am looking for.",
+        "As a user, I want to search for books by author so that I can discover new works by my favorite authors.",
+        "As a user, I want to search for books by ISBN so that I can verify ownership of a book.",
+        "As a user, I want to search for books by genre so that I can explore different types of literature."
+      ],
+      "acceptance_criteria": [
+        "Search functionality should be available by title, author, ISBN, and genre.",
+        "Advanced search options should include filtering by availability, format, genre, and publication year."
+      ]
+    },
+    {
+      "id": "FEAT-005",
+      "title": "Librarian Dashboard",
+      "description": "Display real-time book inventory status, show user borrowing history and overdue items, and allow librarians to manage user accounts and requests.",
+      "user_stories": [
+        "As a librarian, I want to see the current inventory status so that I can manage stock levels.",
+        "As a librarian, I want to view user borrowing history so that I can track book usage.",
+        "As a librarian, I want to manage user accounts so that I can add/remove/update user details.",
+        "As a librarian, I want to process user requests for loans and returns."
+      ],
+      "acceptance_criteria": [
+        "Real-time inventory status should display available/checked-out books.",
+        "User borrowing history should include borrow date, due date, return date (if applicable).",
+        "Librarians should be able to add/remove/update user details including name, email, and role.",
+        "Librarians should be able to approve/deny book loan requests."
+      ]
+    },
+    {
+      "id": "FEAT-006",
+      "title": "Reporting & Analytics",
+      "description": "Generate reports on library usage, popular books, and user activity with an analytics dashboard for administrators.",
+      "user_stories": [
+        "As a librarian or administrator, I want to generate reports on library usage so that I can understand borrowing trends.",
+        "As a librarian or administrator, I want to see popular books by title/author so that I can promote them.",
+        "As a librarian or administrator, I want to track user activity such as number of borrows per month/user."
+      ],
+      "acceptance_criteria": [
+        "Reports should include library usage data, popular books, and user activity trends.",
+        "An analytics dashboard should be provided for administrators with real-time data visualization and historical trends."
+      ]
+    },
+    {
+      "id": "FEAT-007",
+      "title": "User Notifications",
+      "description": "Send email or SMS notifications for overdue items and book availability changes.",
+      "user_stories": [
+        "As a user, I want to receive reminders when my book is due so that I don't forget to return it.",
+        "As a user, I want to be notified when a borrowed book becomes available again."
+      ],
+      "acceptance_criteria": [
+        "Email/SMS notifications should be sent 24 hours before the due date for overdue items.",
+        "Users should be notified when a borrowed book is available again."
+      ]
+    },
+    {
+      "id": "FEAT-008",
+      "title": "Integration with Existing Systems",
+      "description": "Support integration with existing library management systems (e.g., Koha) and provide APIs for data exchange.",
+      "user_stories": [
+        "As a system administrator, I want to integrate the Library Management System API with existing library management systems so that we can synchronize book/user data."
+      ],
+      "acceptance_criteria": [
+        "The API should support bi-directional synchronization of book/user data with existing library management systems.",
+        "Data exchange APIs should be provided for seamless integration between the system and other applications."
+      ]
+    }
+  ]
+}
